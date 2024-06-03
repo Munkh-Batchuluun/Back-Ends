@@ -1,0 +1,4 @@
+Required libraries
+
+npm install express cors mongoose dotenv
+npm install --save-dev nodemon

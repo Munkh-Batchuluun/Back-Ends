@@ -1,0 +1,26 @@
+### Testing get
+GET http://localhost:3001/api/notes
+
+### Testing get by id
+GET http://localhost:3001/api/notes/6655a8409385b6a52818ddf2
+
+### Testing delete
+DELETE http://localhost:3001/api/notes/6655a8409385b6a52818ddf2
+
+### Testing post
+POST http://localhost:3001/api/notes 
+Content-Type: application/json
+
+{
+    "content": "Some",
+    "important": ""
+}
+
+### Testing put
+PUT http://localhost:3001/api/notes/6655b1d0635258cdf7dca5b3
+Content-Type: application/json
+
+{
+    "content": "Put",
+    "important": true
+}
