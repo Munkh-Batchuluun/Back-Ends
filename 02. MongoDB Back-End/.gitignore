@@ -1,0 +1,5 @@
+# Dot env file
+.env
+
+# Node_modules
+/node_modules
