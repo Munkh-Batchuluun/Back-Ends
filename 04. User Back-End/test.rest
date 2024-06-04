@@ -1,0 +1,52 @@
+### Testing get
+GET http://localhost:3001/api/notes
+
+### Testing get by id
+GET http://localhost:3001/api/notes/6655a8639385b6a52818ddf5
+
+### Testing delete
+DELETE http://localhost:3001/api/notes/6655aedaa0daee1e88b02f71
+
+### Testing post
+POST http://localhost:3001/api/notes 
+Content-Type: application/json
+
+{
+    "content": "JS is complicated",
+    "important": true,
+    "userId": "665ef018570f5c924ce0bb8e"
+}
+
+### Testing put
+PUT http://localhost:3001/api/notes/665ef2db0d30d4ddae064783
+Content-Type: application/json
+
+{
+    "content": "Put",
+    "important": true
+}
+
+### Testing users
+GET http://localhost:3001/api/users
+
+### Adding user
+POST http://localhost:3001/api/users
+Content-Type: application/json
+
+{
+    "username": "sam",
+    "name": "Sames",
+    "password": "1234"
+}
+
+### Testing user delete
+DELETE http://localhost:3001/api/users/665ef569d996cc932ee58a1c
+
+### Testing user update
+PUT http://localhost:3001/api/users/665ef783bd7c291e70b6554c
+Content-Type: application/json
+
+{
+    "name": "Sandag",
+    "password": "abcd"
+}
