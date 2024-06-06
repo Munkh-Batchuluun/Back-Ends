@@ -2,19 +2,20 @@
 GET http://localhost:3001/api/notes
 
 ### Testing get by id
-GET http://localhost:3001/api/notes/6655a8639385b6a52818ddf5
+GET http://localhost:3001/api/notes/6661a633667c4fadd89feb85
 
 ### Testing delete
-DELETE http://localhost:3001/api/notes/6655aedaa0daee1e88b02f71
+DELETE http://localhost:3001/api/notes/6661a60e667c4fadd89feb71
 
 ### Testing post
 POST http://localhost:3001/api/notes 
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRvbWFzIiwiaWQiOiI2NjYxOWFjYjYyNDM2NTYzYTNkOTU4NGUiLCJpYXQiOjE3MTc2NzQyODZ9._6TOiL6XxUguCJPN3jhuz5AADn_e8jnGn6P-U-2Fek0
 
 {
-    "content": "JS is complicated",
+    "content": "JWT Test",
     "important": true,
-    "userId": "665ef018570f5c924ce0bb8e"
+    "userId": "66619acb62436563a3d9584e"
 }
 
 ### Testing put
@@ -34,13 +35,13 @@ POST http://localhost:3001/api/users
 Content-Type: application/json
 
 {
-    "username": "sam",
-    "name": "Sames",
+    "username": "tomas",
+    "name": "T_Sames",
     "password": "1234"
 }
 
 ### Testing user delete
-DELETE http://localhost:3001/api/users/665ef569d996cc932ee58a1c
+DELETE http://localhost:3001/api/users/66619acb62436563a3d9584e
 
 ### Testing user update
 PUT http://localhost:3001/api/users/665ef783bd7c291e70b6554c
@@ -49,4 +50,24 @@ Content-Type: application/json
 {
     "name": "Sandag",
     "password": "abcd"
+}
+
+### Testing login
+POST http://localhost:3001/api/login
+Content-Type: application/json
+
+{
+    "username": "tomas",
+    "password": "1234"
+}
+
+### Testing post with JWT
+POST http://localhost:3001/api/notes 
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRvbWFzIiwiaWQiOiI2NjYxOWFjYjYyNDM2NTYzYTNkOTU4NGUiLCJpYXQiOjE3MTc2NzU1MTcsImV4cCI6MTcxNzY3NTU3N30.wC0iI_0cy4Xa8ollS_vxKohhFz_zZKFQQ8oRctTtmY0
+
+{
+    "content": "JWT Test 111",
+    "important": "",
+    "userId": "66619acb62436563a3d9584e"
 }
